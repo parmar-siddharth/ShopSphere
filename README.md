@@ -1,44 +1,99 @@
-# ShopSphere — E-Commerce Platform
+# ShopSphere – E-Commerce Platform
 
-ShopSphere is a full-stack e-commerce web application built with React.js and Spring Boot. It provides product browsing, categories, a shopping cart, checkout, order management, and an admin dashboard.
+ShopSphere is a full-stack e-commerce web application built using **React.js** and **Spring Boot**. It provides a shopping interface for browsing products, exploring categories, managing a cart, and placing demo orders.
+
+## Screenshots
+
+### Homepage
+![ShopSphere Homepage](images/homepage.png)
+
+### Product Listing
+![Product Listing](images/product.png)
+
+### Shopping Cart
+![Shopping Cart](images/cart.png)
+
+### User Registration
+![User Registration](images/register.png)
 
 ## Features
 
-- Browse and search products
-- Browse product categories
-- Shopping cart and checkout
+- Browse products and product categories
+- Search and view product details
+- Add products to a shopping cart
+- Checkout and place demo orders
 - User registration and login
-- Order placement and order tracking
-- Admin dashboard for managing products, categories, users, and orders
+- View order information
+- Admin dashboard for managing store data
+
+*Features depend on the current application configuration.*
 
 ## Tech Stack
 
-**Frontend:** React.js, React Router, Axios, Bootstrap, Vite
+**Frontend**
+- React.js
+- React Router
+- Axios
+- Bootstrap
+- Vite
 
-**Backend:** Java, Spring Boot, Spring Data JPA, Hibernate, Maven
+**Backend**
+- Java
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- Maven
 
-**Database:** MySQL
+**Database**
+- MySQL
+
+**Tools**
+- IntelliJ IDEA
+- Git and GitHub
+- MySQL Workbench
 
 ## Project Structure
 
-- `frontend/` — React frontend
-- `backend/` — Spring Boot REST API
-- `database/` — SQL schema and sample data
-- `README.md` — Project documentation
+```text
+ShopSphere/
+├── backend/       # Spring Boot application
+├── frontend/      # React application
+├── database/      # SQL schema and sample data
+├── images/        # Application screenshots
+├── .gitignore
+└── README.md
+```
 
-## Run Locally
+## Getting Started
 
-### 1. Database
+### Prerequisites
 
-- Start MySQL.
-- Create the database `ecommerce_db`, or execute the provided SQL script if needed.
-- Configure your local database credentials in `backend/src/main/resources/application.properties`.
+Install the following before running the project:
 
-Use `application.properties.example` as a reference for the required configuration.
+- Java JDK compatible with the backend configuration
+- Maven (or use the included Maven Wrapper)
+- Node.js and npm
+- MySQL Server
 
-### 2. Backend
+### 1. Clone the repository
 
-Open a terminal in `backend/` and run:
+```bash
+git clone https://github.com/parmar-siddharth/ShopSphere.git
+cd ShopSphere
+```
+
+### 2. Set up the database
+
+1. Start MySQL Server.
+2. Open the SQL script in the `database/` directory.
+3. Execute the script in MySQL Workbench or your preferred MySQL client.
+4. Configure the database URL, username, and password in the backend's `application.properties`.
+
+**Important:** Use your own local database credentials. Never commit real passwords or secrets to GitHub.
+
+### 3. Run the backend
+
+Open a terminal in the `backend/` directory and run:
 
 ```bash
 ./mvnw spring-boot:run
@@ -50,40 +105,28 @@ On Windows Command Prompt, use:
 mvnw.cmd spring-boot:run
 ```
 
-The backend is configured to run on port `8181`.
+If the Maven Wrapper is unavailable, use `mvn spring-boot:run` after installing Maven.
 
-### 3. Frontend
+### 4. Run the frontend
 
-Open another terminal in `frontend/` and run:
+Open another terminal:
 
 ```bash
+cd frontend
 npm install
 npm run dev
 ```
 
 Open the local URL printed by Vite in your terminal.
 
-## Security
+## Notes
 
-Do not commit database passwords, API keys, or other secrets. Configure credentials locally before running the application.
+- This project is intended for learning and demonstration purposes.
+- Checkout uses demo payment functionality; no real payment is processed.
+- Make sure the database configuration and backend API URL match your local setup.
 
-## Note
+## Author
 
-This project is intended for learning and demonstration purposes. Payment functionality, if present, is for demo use only.
+**Siddharth Parmar**
 
-## Screenshots
-
-### Home Page
-![ShopSphere Home Page](images/homepage.png)
-
-### Products Page
-![ShopSphere Products Page](images/product.png)
-
-### Main Page
-![ShopSphere Main Page](images/mainpage.png)
-
-### Login / Register
-![ShopSphere Register Page](images/register.png)
-
-### Shopping Cart
-![ShopSphere Cart](images/cart.png)
+GitHub: [parmar-siddharth](https://github.com/parmar-siddharth)
